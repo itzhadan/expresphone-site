@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | Expresphone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Arial;
+      background:#0b0f1a;
+      color:#ffffff;
+    }
+    a{text-decoration:none;color:inherit}
+
+    /* HEADER (אחיד) */
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:#0f1420;
+      border-bottom:1px solid #1e2440;
+    }
+    .header-inner{
+      max-width:1100px;
+      margin:auto;
+      padding:12px 16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      direction:rtl;
+    }
+    .logo-wrap{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+    .logo-wrap img{
+      height:72px;
+      width:auto;
+    }
+    .logo-text{
+      line-height:1.2;
+      font-size:15px;
+    }
+    .nav{
+      display:flex;
+      gap:6px;
+      flex-wrap:wrap;
+    }
+    .nav a{
+      padding:6px 12px;
+      border-radius:999px;
+      background:#121826;
+      border:1px solid #24305c;
+      font-size:13px;
+      font-weight:600;
+    }
+
+    /* CONTENT */
+    .container{max-width:1100px;margin:auto;padding:24px 16px}
+    .hero{
+      background:linear-gradient(135deg,#1b2244,#121826);
+      border-radius:20px;
+      padding:22px;
+    }
+    .hero h1{margin:0 0 10px;font-size:22px}
+    .hero p{color:#b6c0ff;line-height:1.7}
+
+    .box{
+      background:#121826;
+      border-radius:18px;
+      padding:20px;
+      margin-top:20px;
+    }
+    ul{line-height:1.8}
+    .highlight{color:#ffb020;font-weight:700}
+
+    .actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:16px;
+    }
+    .btn{
+      padding:10px 18px;
+      border-radius:999px;
+      font-weight:700;
+    }
+    .phone{background:#35c759}
+    .whatsapp{background:#25d366}
+
+    .footer{
+      text-align:center;
+      color:#8fa2ff;
+      padding:24px 10px;
+      font-size:14px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+
+    <!-- לוגו מימין -->
+    <div class="logo-wrap">
+      <img src="/assets/logo.png" alt="Expresphone">
+      <div class="logo-text">
+        <strong>Expresphone</strong><br>
+        <small>מעבדת תיקון סלולר ניידת</small>
+      </div>
+    </div>
+
+    <!-- ניווט משמאל -->
+    <nav class="nav">
+      <a href="index.html">בית</a>
+      <a href="fix.html">Fix</a>
+      <a href="school.html">School</a>
+      <a href="stories.html">מאגר טכנולוגי</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<div class="container">
+
+  <section class="hero">
+    <h1>צור קשר · אחריות ותנאי תיקון</h1>
+    <p>
+      שקיפות מלאה, בלי אותיות קטנות.<br>
+      לפני כל תיקון – חשוב לדעת.
+    </p>
+  </section>
+
+  <section class="box">
+    <h2>📜 תנאי אחריות</h2>
+    <ul>
+      <li>
+        על כל תיקון ניתנת <span class="highlight">אחריות של 3 חודשים</span>,
+        למעט מסכים.
+      </li>
+      <li>
+        על תיקוני <span class="highlight">מסכים</span> ניתנת אחריות
+        <span class="highlight">עד 3 שעות בלבד</span> מרגע סיום התיקון.
+      </li>
+      <li>
+        מכשיר שלא ייאסף ע״י הלקוח
+        <span class="highlight">עד 30 יום מיום התיקון</span>
+        ייחשב כהודעה על השארתו
+        <span class="highlight">לצרכי מעבדה</span>.
+      </li>
+      <li>
+        תיקוני <span class="highlight">נזקי מים / קורוזיה</span>
+        אינם כוללים אחריות מכל סוג שהוא.
+      </li>
+      <li>
+        דמי התיקון בתיקוני מים וקורוזיה
+        הינם <span class="highlight">עבור העבודה והבדיקה בלבד</span>,
+        ולא בהכרח עבור הצלחת התיקון.
+      </li>
+    </ul>
+  </section>
+
+  <section class="box">
+    <h2>📞 יצירת קשר</h2>
+    <p>לתיאום תיקון, שאלה או ייעוץ – אנחנו כאן.</p>
+    <div class="actions">
+      <a class="btn phone" href="tel:0547474646">📞 054-747-4646</a>
+      <a class="btn whatsapp" href="https://wa.me/972547474646" target="_blank">💬 WhatsApp</a>
+    </div>
+  </section>
+
+</div>
+
+<div class="footer">
+  © 2025 Expresphone · itzhadan@expresphone.com · 054-747-4646
+</div>
+
+</body>
+</html>

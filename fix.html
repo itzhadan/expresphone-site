@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <title>Fix | Expresphone</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Expresphone · בית</title>
 
   <style>
     *{box-sizing:border-box}
@@ -15,6 +15,7 @@
     }
     a{text-decoration:none;color:inherit}
 
+    /* HEADER (אחיד) */
     .site-header{
       position:sticky;
       top:0;
@@ -25,26 +26,25 @@
     .header-inner{
       max-width:1100px;
       margin:auto;
-      padding:10px 16px;
+      padding:12px 16px;
       display:flex;
       align-items:center;
       justify-content:space-between;
       gap:12px;
+      direction:rtl;
     }
     .logo-wrap{
       display:flex;
       align-items:center;
-      gap:10px;
+      gap:14px;
     }
     .logo-wrap img{
-      width:48px;
-      height:48px;
-      background:#fff;
-      border-radius:10px;
+      height:72px;
+      width:auto;
     }
     .logo-text{
       line-height:1.2;
-      font-size:14px;
+      font-size:15px;
     }
     .nav{
       display:flex;
@@ -60,6 +60,7 @@
       font-weight:600;
     }
 
+    /* CONTENT */
     .container{max-width:1100px;margin:auto;padding:24px 16px}
     .hero{
       background:linear-gradient(135deg,#1b2244,#121826);
@@ -67,26 +68,9 @@
       padding:22px;
     }
     .hero h1{margin:0 0 10px;font-size:22px}
-    .hero p{color:#b6c0ff;line-height:1.6}
+    .hero p{color:#b6c0ff}
 
-    .actions{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:14px;
-    }
-    .btn{
-      padding:8px 14px;
-      border-radius:999px;
-      font-size:13px;
-      font-weight:700;
-    }
-    .phone{background:#35c759}
-    .whatsapp{background:#25d366}
-    .paypal{background:#ff9f0a}
-    .telegram{background:#2AABEE}
-
-    .grid{
+    .cards{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
       gap:16px;
@@ -96,6 +80,19 @@
       background:#121826;
       border-radius:18px;
       padding:18px;
+    }
+    .card ul{line-height:1.8}
+
+    .cta{
+      margin-top:28px;
+      text-align:center;
+    }
+    .btn{
+      display:inline-block;
+      padding:10px 18px;
+      border-radius:999px;
+      background:#25d366;
+      font-weight:700;
     }
 
     .footer{
@@ -123,8 +120,8 @@
 
     <!-- ניווט משמאל -->
     <nav class="nav">
-      <a href="index.html" class="active">בית</a>
-      <a href="fix.html">Fix</a>
+      <a href="index.html">בית</a>
+      <a href="fix.html" class="active">Fix</a>
       <a href="school.html">School</a>
       <a href="stories.html">מאגר טכנולוגי</a>
       <a href="contact.html">Contact</a>
@@ -137,33 +134,45 @@
 <div class="container">
 
   <section class="hero">
-    <h1>תיקונים מהירים · עבודה נקייה · שירות עד הבית</h1>
-    <p>
-      מעל 15 שנות ניסיון בתיקון סלולר, מחשבים וטאבלטים.<br>
-      פתרונות אמיתיים מהשטח – בלי חירטוטים.
-    </p>
-
-    <div class="actions">
-      <a class="btn phone" href="tel:0547474646">📞 טלפון</a>
-      <a class="btn whatsapp" href="https://wa.me/972547474646" target="_blank">WhatsApp</a>
-      <a class="btn paypal" href="https://www.paypal.com/ncp/payment/YL6MX5TC2CCPC" target="_blank">PayPal</a>
-      <a class="btn telegram" href="https://t.me/expresphon_inc_bot" target="_blank">Telegram</a>
-    </div>
+    <h1>Fix – תיקונים חכמים, לא ניחושים</h1>
+    <p>כל תיקון מתחיל באבחון. בלי קיצורי דרך.</p>
   </section>
 
-  <div class="grid">
+  <section class="cards">
+
     <div class="card">
-      <h2>Fix</h2>
-      <p>תיקוני סלולר, טאבלטים ומחשבים – ניסיון אמיתי מהשטח.</p>
+      <h3>📱 סלולר</h3>
+      <ul>
+        <li>מסכים וסוללות</li>
+        <li>Face ID / Touch ID</li>
+        <li>טעינה וחימום</li>
+        <li>מכשירים שלא נדלקים</li>
+      </ul>
     </div>
+
     <div class="card">
-      <h2>School</h2>
-      <p>הכשרה ולימודים מעשיים לעולם הטכנולוגיה והתיקונים.</p>
+      <h3>💻 מחשבים</h3>
+      <ul>
+        <li>Mac / Windows</li>
+        <li>אתחול ו-Boot</li>
+        <li>דיסקים וניקוי</li>
+        <li>נזקי נוזלים</li>
+      </ul>
     </div>
+
     <div class="card">
-      <h2>מאגר טכנולוגי</h2>
-      <p>סיפורים, תקלות ופתרונות אמיתיים מהמעבדה.</p>
+      <h3>🧠 תוכנה וקושחה</h3>
+      <ul>
+        <li>שחזור מערכות</li>
+        <li>צריבות ועדכונים</li>
+        <li>זיהוי חומרה מול תוכנה</li>
+      </ul>
     </div>
+
+  </section>
+
+  <div class="cta">
+    <a class="btn" href="https://wa.me/972547474646" target="_blank">צור קשר לתיקון</a>
   </div>
 
 </div>

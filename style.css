@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0e1320;
+  color: #fff;
+}
+
+a { color: #4fc3f7; text-decoration: none; }
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: #11182a;
+}
+
+nav a {
+  margin-left: 15px;
+  opacity: 0.8;
+}
+nav a.active, nav a:hover {
+  opacity: 1;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #1b2238;
+  padding: 20px;
+  border-radius: 12px;
+  width: 260px;
+}
+
+.card ul {
+  padding-right: 20px;
+}
+
+.cta {
+  text-align: center;
+  margin: 40px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 30px;
+  background: #25d366;
+  color: #000;
+  font-weight: bold;
+}
+
+.form-box {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #1b2238;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+form input, form textarea, form button {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+form button {
+  background: #4fc3f7;
+  font-weight: bold;
+}
+
+/* אנימציות */
+.fade-in {
+  animation: fade 0.8s ease;
+}
+.slide-up {
+  animation: slide 0.6s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slide {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.6;
+}
