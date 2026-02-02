@@ -104,7 +104,12 @@
       padding:24px 10px;
       font-size:14px;
     }
-  </style>
+  
+    .btn:hover{filter:brightness(1.05)}
+    .btn:focus{outline:3px solid rgba(255,255,255,.55);outline-offset:3px}
+
+  .pay{background:#f59e0b;color:#000}
+</style>
 </head>
 
 <body>
@@ -114,7 +119,7 @@
 
     <!-- לוגו מימין -->
     <div class="logo-wrap">
-      <img src="/assets/logo.png" alt="Expresphone">
+      <img src="assets/logo.png" alt="Expresphone">
       <div class="logo-text">
         <strong>Expresphone</strong><br>
         <small>מעבדת תיקון סלולר ניידת</small>
@@ -144,11 +149,18 @@
     </p>
 
     <div class="actions">
-      <a class="btn phone" href="tel:0547474646">📞 טלפון</a>
-      <a class="btn whatsapp" href="https://wa.me/972547474646" target="_blank">WhatsApp</a>
-      <a class="btn paypal" href="https://www.paypal.com/ncp/payment/YL6MX5TC2CCPC" target="_blank">PayPal</a>
-      <a class="btn telegram" href="https://t.me/expresphon_inc_bot" target="_blank">Telegram</a>
-    </div>
+  <a class="btn phone" href="tel:0547474646">📞 טלפון</a>
+
+  <a class="btn whatsapp" href="https://wa.me/972555722878" target="_blank">💬 WhatsApp (בוט)</a>
+
+  <!-- כפתור תשלום -->
+  <a class="btn pay" href="payment.html">💳 תשלום</a>
+
+  <!-- PayPal -->
+  <a class="btn paypal" href="https://www.paypal.com/ncp/payment/YL6MX5TC2CCPC" target="_blank">🅿️ PayPal</a>
+
+  <a class="btn telegram" href="https://t.me/expresphon_inc_bot" target="_blank">✈️ Telegram</a>
+</div>
   </section>
 
   <div class="grid">

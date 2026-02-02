@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>תשלום מאובטח | Expresphone</title>
+  <style>
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:#0b0f14;color:#e6eef9}
+    .wrap{max-width:720px;margin:0 auto;padding:28px 18px}
+    .card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px}
+    h1{margin:0 0 10px;font-size:22px}
+    p{margin:0 0 14px;opacity:.9;line-height:1.5}
+    .row{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+    .btn{cursor:pointer;border:0;border-radius:999px;padding:12px 16px;font-weight:800;font-size:15px}
+    .b100{background:#f97316}
+    .b200{background:#f59e0b}
+    .b399{background:#fb7185}
+    .bgo{background:#22c55e}
+    .bback{background:#3b82f6;color:#fff;text-decoration:none;display:inline-block}
+    label{display:block;margin-top:12px;margin-bottom:6px;font-weight:700}
+    input{width:100%;box-sizing:border-box;padding:12px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.18);
+           background:rgba(0,0,0,.25);color:#fff;font-size:16px}
+    small{opacity:.8}
+    .err{color:#ffb4b4;margin-top:10px;display:none}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="bback btn" href="index.html">⬅ חזרה לבית</a>
+    <div style="height:12px"></div>
+    <div class="card">
+      <h1>תשלום מאובטח</h1>
+      <p>בחר סכום מהיר או הזן סכום פתוח. לאחר מכן תועבר לעמוד התשלום של RobinPay.</p>
+
+      <div class="row">
+        <button class="btn b100" onclick="pay(100)">💳 תשלום 100 ₪</button>
+        <button class="btn b200" onclick="pay(200)">💳 תשלום 200 ₪</button>
+        <button class="btn b399" onclick="pay(399)">💳 תשלום 399 ₪</button>
+      </div>
+
+      <label for="amount">סכום פתוח (₪)</label>
+      <input id="amount" inputmode="numeric" placeholder="לדוגמה: 399" />
+      <small>RobinPay דורש amount בלינק, לכן הסכום הפתוח נעשה כאן.</small>
+
+      <div style="height:12px"></div>
+      <button class="btn bgo" onclick="payFromInput()">✅ המשך לתשלום</button>
+
+      <div id="err" class="err">שגיאה: נא להזין סכום תקין (מספר גדול מ-0).</div>
+    </div>
+  </div>
+
+<script>
+  const BASE = 'https://api.robinpay.co.il/cardcom/public-load/6e7822a9-a447-4427-ad82-d6bc0f990379';
+
+  function makeOrderId() {
+    // order_id חייב עד 32 תווים
+    return "exp" + Date.now().toString(36).slice(-9);
+  }
+
+  function buildUrl(amount) {
+    const a = Math.round(Number(amount));
+    const oid = makeOrderId();
+    return `${BASE}?amount=${a}&order_id=${encodeURIComponent(oid)}`;
+  }
+
+  function pay(amount) {
+    window.location.href = buildUrl(amount);
+  }
+
+  function payFromInput() {
+    const v = document.getElementById("amount").value.trim().replace(/[^\d.]/g,'');
+    const n = Number(v);
+    const err = document.getElementById("err");
+    if (!isFinite(n) || n <= 0) {
+      err.style.display = "block";
+      return;
+    }
+    err.style.display = "none";
+    pay(n);
+  }
+</script>
+</body>
+</html>

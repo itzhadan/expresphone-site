@@ -1,205 +1,111 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>מאגר טכנולוגי | Expresphone</title>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <style>
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Arial;
-      background:#0b0f1a;
-      color:#ffffff;
-    }
-    a{text-decoration:none;color:inherit}
-
-    /* HEADER (אחיד) */
-    .site-header{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:#0f1420;
-      border-bottom:1px solid #1e2440;
-    }
-    .header-inner{
-      max-width:1100px;
-      margin:auto;
-      padding:12px 16px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      direction:rtl;
-    }
-    .logo-wrap{
-      display:flex;
-      align-items:center;
-      gap:14px;
-    }
-    .logo-wrap img{
-      height:72px;
-      width:auto;
-    }
-    .logo-text{
-      line-height:1.2;
-      font-size:15px;
-    }
-    .nav{
-      display:flex;
-      gap:6px;
-      flex-wrap:wrap;
-    }
-    .nav a{
-      padding:6px 12px;
-      border-radius:999px;
-      background:#121826;
-      border:1px solid #24305c;
-      font-size:13px;
-      font-weight:600;
-    }
-
-    /* CONTENT */
-    .container{max-width:1100px;margin:auto;padding:24px 16px}
-    .hero{
-      background:linear-gradient(135deg,#1b2244,#121826);
-      border-radius:20px;
-      padding:22px;
-    }
-    .hero h1{margin:0 0 10px;font-size:22px}
-    .hero p{color:#b6c0ff;line-height:1.7}
-
-    .story-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:16px;
-      margin-top:24px;
-    }
-    .story-card{
-      background:#121826;
-      border-radius:18px;
-      padding:18px;
-    }
-    .story-meta{
-      font-size:13px;
-      color:#8fa2ff;
-    }
-    .story-card h2{
-      margin:10px 0 8px;
-      font-size:18px;
-    }
-    .story-card p{
-      color:#b6c0ff;
-      line-height:1.7;
-      margin:0 0 12px;
-    }
-    .btnlink{
-      display:inline-block;
-      padding:8px 14px;
-      border-radius:999px;
-      background:#2AABEE;
-      font-weight:700;
-      font-size:13px;
-    }
-
-    .footer{
-      text-align:center;
-      color:#8fa2ff;
-      padding:24px 10px;
-      font-size:14px;
-    }
-  </style>
+  <title>מאגר טכנולוגיה · Xpresphone</title>
+  <meta name="description" content="סיפורים ותובנות מהשטח — אבחון, תיקונים, תהליכים, ואוטומציה במעבדה.">
+  <link rel="stylesheet" href="css/stories.css">
 </head>
-
 <body>
+  <div class="topbar">
+    <div class="inner">
+      <div class="brand">
+        <img src="assets/logo.png" alt="Xpresphone">
+        <div>
+          <strong>Xpresphone</strong><br>
+          <small>מאגר טכנולוגיה — סיפורים מהשטח</small>
+        </div>
+      </div>
+      <div class="nav">
+        <a href="index.html">בית</a>
+        <a href="fix.html">Fix</a>
+        <a href="school.html">School</a>
+        <a href="contact.html">Contact</a>
+        <a class="active" href="stories.html">מאגר טכנולוגיה</a>
+      </div>
+    </div>
+  </div>
 
-<header class="site-header">
-  <div class="header-inner">
-
-    <!-- לוגו מימין -->
-    <div class="logo-wrap">
-      <img src="/assets/logo.png" alt="Expresphone">
-      <div class="logo-text">
-        <strong>Expresphone</strong><br>
-        <small>מעבדת תיקון סלולר ניידת</small>
+  <div class="container">
+    <div class="hero">
+      <h1>מאגר טכנולוגיה</h1>
+      <p class="meta">סיפור־ידע, לא מדריך. רגעים קטנים מהמעבדה שמלמדים הרבה.</p>
+      <div class="btnrow" style="margin-top:14px">
+        <a class="btn secondary" href="index.html">חזרה לבית</a>
       </div>
     </div>
 
-    <!-- ניווט משמאל -->
-    <nav class="nav">
-      <a href="index.html">בית</a>
-      <a href="fix.html">Fix</a>
-      <a href="school.html">School</a>
-      <a href="stories.html" class="active">מאגר טכנולוגי</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="list">
 
+      <div class="tile">
+        <div class="badges"><span class="badge">מאגר טכנולוגיה</span><span class="badge">תיעוד</span><span class="badge">תובנות</span></div>
+        <h3>יומן ItzikFix — סיפור וידע מהשטח</h3>
+        <div class="meta">26/07/2025</div>
+        <p>איך נולד “מאגר טכנולוגיה”, ולמה דווקא סיפור קצר מהשטח יכול ללמד יותר ממדריך שלם.</p>
+        <div class="btnrow">
+          <a class="btn" href="stories/2025-07-26-journal.html">קרא עוד</a>
+        </div>
+      </div>
+
+
+      <div class="tile">
+        <div class="badges"><span class="badge">חשמל</span><span class="badge">כבלים</span><span class="badge">אבחון</span></div>
+        <h3>נשיפת הכבל השרוף — כשמים שורפים מתכת</h3>
+        <div class="meta">01/11/2025</div>
+        <p>כבל טעינה פשוט, קצת מים, והרבה נזק. איך מאבחנים נכון ומה עושים כדי לא להפוך תקלה קטנה לשריפה.</p>
+        <div class="btnrow">
+          <a class="btn" href="stories/2025-11-01-cable.html">קרא עוד</a>
+        </div>
+      </div>
+
+
+      <div class="tile">
+        <div class="badges"><span class="badge">אבטחה</span><span class="badge">ביומטריה</span><span class="badge">מחשבים</span></div>
+        <h3>DNA, טביעת אצבע או פנים — ומה הקשר ל‑P מול NP</h3>
+        <div class="meta">26/12/2025</div>
+        <p>ביומטריה נראית קסם, אבל מאחוריה יש מתמטיקה: למה קל “לבדוק” התאמה וקשה “לזייף” אותה — בדיוק כמו P מול NP.</p>
+        <div class="btnrow">
+          <a class="btn" href="stories/2025-12-26-apple-samsung-biometric-pnp.html">קרא עוד</a>
+        </div>
+      </div>
+
+
+      <div class="tile">
+        <div class="badges"><span class="badge">אוטומציה</span><span class="badge">ענן</span><span class="badge">עסק</span></div>
+        <h3>הקמת מערכת מלאה בענן שעובדת מכל מקום</h3>
+        <div class="meta">26/12/2025</div>
+        <p>איך עוברים מטפסים מפוזרים לזרימה מסודרת: קליטה, תיעוד, PDF, וקישור ללקוח — בלי להכביד על העבודה במעבדה.</p>
+        <div class="btnrow">
+          <a class="btn" href="stories/2025-12-26-cloud-forms-system.html">קרא עוד</a>
+        </div>
+      </div>
+
+
+      <div class="tile">
+        <div class="badges"><span class="badge">אוטומציה</span><span class="badge">PDF</span><span class="badge">תהליך עבודה</span></div>
+        <h3>מערכת טפסים חכמה — נולדה מהשטח, בשביל העבודה עצמה</h3>
+        <div class="meta">27/12/2025</div>
+        <p>המשך לבניית המערכת: סטטוסים, תבניות, ושפה אחידה מול לקוח — כדי שהעסק ייראה מקצועי גם כשאתה רץ.</p>
+        <div class="btnrow">
+          <a class="btn" href="stories/2025-12-27-cloud-forms-system-2.html">קרא עוד</a>
+        </div>
+      </div>
+
+
+      <div class="tile">
+        <div class="badges"><span class="badge">אייפון</span><span class="badge">שחזור</span><span class="badge">מעבדה</span></div>
+        <h3>אנשים פשוטים, טכנולוגיה מורכבת — ופריצת iPhone בשטח</h3>
+        <div class="meta">—</div>
+        <p>כמה הערות מהשטח על שחזור, גיבויים, והפער בין מה שהלקוח חושב למה שבאמת קורה בתוך המכשיר.</p>
+        <div class="btnrow">
+          <a class="btn" href="stories/iphone-recovery-lab-notes.html">קרא עוד</a>
+        </div>
+      </div>
+
+    </div>
   </div>
-</header>
 
-
-<div class="container">
-
-  <section class="hero">
-    <h1>מאגר טכנולוגי</h1>
-    <p>
-      סיפורים אמיתיים מהשטח — פחות “מדריך”, יותר ניסיון.<br>
-      תקלות, תובנות ולמידה יומיומית ממעבדת Expresphone.
-    </p>
-  </section>
-
-  <section class="story-grid">
-
-    <article class="story-card">
-      <div class="story-meta">26 בדצמבר 2025 · אבטחה · Apple / Samsung</div>
-      <h2>DNA, טביעת אצבע או פנים — ומה הקשר ל‑P מול NP</h2>
-      <p>איך בדיקה קלה מול חיפוש קשה הופך ל‑PIN, Face ID וטביעת אצבע.</p>
-      <a class="btnlink" href="stories/2025-12-26-apple-samsung-biometric-pnp.html">קרא עוד</a>
-    </article>
-
-    <article class="story-card">
-      <div class="story-meta">26 בדצמבר 2025 · אוטומציה · ענן</div>
-      <h2>הקמת מערכת מלאה בענן שעובדת מכל מקום</h2>
-      <p>מערכת טפסים חכמה שנולדה מהשטח — PDF אוטומטי, ענן, וסדר.</p>
-      <a class="btnlink" href="stories/2025-12-26-cloud-forms-system.html">קרא עוד</a>
-    </article>
-
-    <article class="story-card">
-      <div class="story-meta">1 בנובמבר 2025 · חשמל · XMAX</div>
-      <h2>נשיפת הכבל השרוף — כשמים שורפים מתכת</h2>
-      <p>שטיפה, בבוקר אין טעינה — ובקצה הכבל רק 1.4V. למה זה קורה?</p>
-      <a class="btnlink" href="stories/2025-11-01-cable.html">קרא עוד</a>
-    </article>
-
-    <article class="story-card">
-      <div class="story-meta">26 ביולי 2025 · יומן · ItzikFix</div>
-      <h2>יומן ItzikFix — סיפור וידע מהשטח</h2>
-      <p>ירידה מ‑Beta, שני WhatsApp Business, ושינוי שעה ב‑XMAX.</p>
-      <a class="btnlink" href="stories/2025-07-26-journal.html">קרא עוד</a>
-    </article>
-
-    <article class="story-card">
-      <div class="story-meta">שחזור מידע · iPhone</div>
-      <h2>אנשים פשוטים, טכנולוגיה מורכבת</h2>
-      <p>לפעמים הטריק הוא לתת למכשיר עוגן נכון — ולתת לו לעבוד.</p>
-      <a class="btnlink" href="stories/iphone-recovery-lab-notes.html">קרא עוד</a>
-    </article>
-
-    <article class="story-card">
-      <div class="story-meta">דצמבר 2025 · ענן · עבודה</div>
-      <h2>מערכת טפסים חכמה – נולדה מהשטח</h2>
-      <p>פחות ניירת, יותר עבודה. מסמך מקצועי בלחיצה.</p>
-      <a class="btnlink" href="stories/2025-12-27-cloud-forms-system-2.html">קרא עוד</a>
-    </article>
-
-  </section>
-
-</div>
-
-<div class="footer">
-  © 2025 Expresphone · itzhadan@expresphone.com · 054‑747‑4646
-</div>
-
+  <div class="footer">© 2026 Xpresphone inc · expresphone.com</div>
 </body>
 </html>
